@@ -46,9 +46,6 @@ function upgrade() {
 }
 
 function draw() {
-  let button = createButton('Slower Bullets')
-  button.position(10, 370)
-  button.mousePressed(upgrade)
   ellipse(a, c, 25)
   c += d
   ship(x, y)
@@ -134,7 +131,7 @@ function keyPressed() {
         m += 1
       }
     }
-  } //Shoot (W'd)
+  } //Shoot (W)
   if (keyCode == 13) {
     x = 200
     y = 250
@@ -145,4 +142,7 @@ function keyPressed() {
     s = 0
     background(0)
   } //Reset Game (Enter)
+  if (keyCode == 101) {
+    upgrade()
+  }
 }
